@@ -1,0 +1,34 @@
+@mixin flex($c: row) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: $c;
+}
+
+.del {
+	color: #999999;
+	text-decoration: line-through;
+}
+
+.ellipsis2 {
+	overflow : hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	word-break: break-all;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+}
+
+.ellipsis { // 文字溢出打点换行
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.price {
+	color: #FF1515;
+}
+
+.fc {
+	@include flex();
+}
